@@ -7,10 +7,28 @@ import Friend from './Friend'
 import styled from 'styled-components'
 
 const Heading = styled.h1`
-  font-size: 7vw;
+  font-size: 100px;
   border: 3px dashed;
-  padding: 2vw;
+  padding: 20px;
 `
+
+const Page = styled.div `
+  background-color: beige;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 100px;
+`
+
+document.querySelector('html').style.height = '100vh'
+document.querySelector('html').style.width = '100vw'
+document.querySelector('body').style.height = '100vh'
+document.querySelector('body').style.width = '100vw'
+document.querySelector('#root').style.height = '100vh'
+document.querySelector('#root').style.width = '100vw'
+
+
+
 
 export default function App() {
   const [friends, setFriends] = useState([])
@@ -35,7 +53,7 @@ export default function App() {
   }, [])
 
   return (
-    <div className='container'>
+    <Page className='container'>
       <Heading>My friends:</Heading>
       {
         friends.map(fr => {
@@ -45,6 +63,6 @@ export default function App() {
       {
         currentFriendId && <Details friendId={currentFriendId} close={closeDetails} />
       }
-    </div>
+    </Page>
   )
 }

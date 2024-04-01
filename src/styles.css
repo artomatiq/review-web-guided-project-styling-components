@@ -8,13 +8,15 @@ body {
   box-shadow: 0px 1px 6px -2px #807f7f;
   border-radius: 8px;
   margin-top: 16px;
-  padding: 16px;
+  padding: 12vw;
+  max-width: none;
+  width: 100vw;
 }
 .friend {
-  width: 60%;
+  width: 40%;
   display: flex;
   justify-content: space-between;
 }
 button {
-  border-radius: 4px;
+  border-radius: 9px;
 }
