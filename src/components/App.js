@@ -4,6 +4,14 @@ import { BASE_URL, API_KEY } from '../constants'
 import Details from './Details'
 import Friend from './Friend'
 
+import styled from 'styled-components'
+
+const Heading = styled.h1`
+  font-size: 7vw;
+  border: 3px dashed;
+  padding: 2vw;
+`
+
 export default function App() {
   const [friends, setFriends] = useState([])
   const [currentFriendId, setCurrentFriendId] = useState('1')
@@ -28,7 +36,7 @@ export default function App() {
 
   return (
     <div className='container'>
-      <h1>My friends:</h1>
+      <Heading>My friends:</Heading>
       {
         friends.map(fr => {
           return <Friend key={fr.id} info={fr} action={openDetails} />
